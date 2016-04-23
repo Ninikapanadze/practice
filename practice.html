@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<script>
+	/*
+
+	//xarisxSi ayvana
+	var a = prompt("sheiyvanet ricxvi");
+	var b = prompt("sheiyvanet xarisxi");
+	var c = 1;
+	while (b>0) {
+		c=c*a;
+		b--;
+	}
+	alert(c);
+
+	//shekreba;
+	var a = 1;
+	var answer = 0;
+	var b; 
+	while (a == 1) {
+		b = prompt('sheiyvanet ricxvebi');
+		
+		if(b!== "=") 
+			{b = b * 1;
+			answer += b;
+		}
+		if (b == "=") {
+			alert (answer);
+			a = 0;
+		}
+	}
+   
+   //sjekreba roca shemoiyvanen =;
+   var a = 0;
+   var b = 0;
+   while (a != "=") {
+   		b = b-(-a);
+   		a = prompt("sheiyvanet ricxvi");
+   		
+   }
+
+   alert(b);
+
+  
+	//list itemebis raodenoba
+   var a  = prompt("sheiyvanet richvi");
+   var a  = a * 1;
+   var b = 0;
+   document.write("<ul>");
+   while(a>0) {
+   	  b++;
+   	  a--;
+   	 document.write("<li>" + b + "</li>");
+
+   }
+   document.write("</ul>");
+
+    
+	//fulis daxurdaveba-mcdeloba
+    var a = 50;
+    var b = 0; 
+    var array = [20, 10, 5];
+    
+    	for(var i=0; i<array.length; i++) {
+    		for (var j=0; j<a; b+=1)
+    		b+=array[i];
+    	}
+
+    	// masivebis dabewdva morigeobit
+      var firstArray = ['a','b','c'];
+      var secondArray = [1,2,3];
+      var newarray = [];
+
+      var length = firstArray.length;      
+
+      for(var i = 0; i<length; i++) {
+        newarray.push(firstArray[i]);
+        newarray.push(secondArray[i]);
+      }
+      console.log(newarray);
+
+
+            //print leap years
+      var year = 2016;
+      for(var i=0; i<20; i++) {
+        console.log(year+=4);
+      }
+      
+
+
+    	//tables dabewdva + kalendari
+    	var ThisMonthDaysNumber = prompt("numbers of days in month");
+      var todayNumber = prompt("enter today's number");
+      todayNumber = todayNumber*1;
+      var dayOfWeekOfFirstDay = prompt("kviris romeli dgea 1 richvi");
+      dayOfWeekOfFirstDay = dayOfWeekOfFirstDay*1;
+      var reminderFrommonth = ThisMonthDaysNumber%7;
+      var a = ((ThisMonthDaysNumber - reminderFrommonth)/7) + 1;
+    	var b = 7;
+      var localDayNumbmer = 1;
+      var txt='';
+
+    	document.write("<table border='1'; style='color:blue; background-color:#07d3f8'>");
+    	while(a>0) {
+    		var k = b;
+    		document.write("<tr>");
+    		while (k>0) {
+          console.log(todayNumber+dayOfWeekOfFirstDay-1);
+          
+           txt=(localDayNumbmer>ThisMonthDaysNumber*1 + dayOfWeekOfFirstDay-1|| localDayNumbmer<dayOfWeekOfFirstDay)?'':localDayNumbmer-dayOfWeekOfFirstDay+1;
+           style=(localDayNumbmer==todayNumber+dayOfWeekOfFirstDay-1)?"<td style='background-color:red'>":"<td>"; 
+           
+            document.write(style + txt + "</td>");
+           
+           
+    			k--;
+          localDayNumbmer++;
+    		};
+    		document.write("</tr>");
+    		a--;
+    	}
+    	document.write("</table>");
+
+
+      
+
+    	
+      //Wadrakis dafis dahatva
+    	var a = prompt("Shemoiyvanet svetebis raodenoba");
+      var b = prompt("shemoiyvanen striqonis raodenoba");
+      a = a*1;
+      b=b*1;
+
+      
+
+      document.write("<table border='1'>");
+      for(var i=0; i<a; i++) {
+        document.write("<tr>")
+        for(var j=0; j<b; j++){
+          if((j+i)%2==0) {
+            document.write("<td></td>");
+          }
+          else{
+            document.write("<td style='background-color:black'>1</td>")
+          }
+          
+        }
+        
+        document.write("<tr>")
+      }
+      document.write("</table>");
+
+      
+
+      ///////////////////timus problems//////////////////
+      /////1 --- a+b problem//////////
+
+      var a = prompt("enter first number");
+      var b = prompt("enter second number");
+      a = a *1;
+      b = b * 1;
+      var sum = a + b;
+      alert(sum);
+
+
+     
+
+      /////3 --- sum problem//////////
+
+      var a = prompt("enter number for counting sum");
+      a = a*1;
+      var sum = 0;
+      for(var i=0; i<11; i++) {
+        sum += i;
+        console.log(sum);
+      }
+
+      alert(sum);
+
+
+     
+
+      /////stone pile problem//////////
+
+      var stoneNumber = prompt("enter number of stones");
+      stoneNumber *= 1;
+      var stoneMasses = [];
+      var possibleAnswer = [];     
+
+      for(var i=0; i<stoneNumber; i++) {
+        var mass = prompt("enter possible stone masses");
+        mass *=1;
+        stoneMasses.push(mass);
+      }
+
+      for(var i=0; i<stoneMasses.length-1; i++) {
+        
+        var numberToPush = stoneMasses[i] - stoneMasses[i+1];
+        if(numberToPush<0) {
+          numberToPush = -numberToPush;
+        }
+        possibleAnswer.push(numberToPush) ;        
+
+      }
+
+      var answer = possibleAnswer[0];
+
+      for(var i=0; i<possibleAnswer.length; i++) {
+        if(possibleAnswer[i]<answer) {
+          answer = possibleAnswer[i];
+        }
+      }      
+      
+      alert(answer);
+
+      
+      // harrylarry problem
+      var harryShotNumber = 8;
+      var larryShotNumber = 6;
+
+      var sum = 10;
+
+      var harryNot = sum - harryShotNumber;
+      var larryNot = sum - larryShotNumber;
+
+      alert(harryNot + " " + larryNot);
+
+      
+
+      ////////////grisha n problem/////////////
+      var problemsDuringFirstHour = 3;
+      var totalminutes = 300;
+      var minutesPerRestProblems = 45;
+      var totalProblemAmount = 12; 
+      function Checker(problemsDuringFirstHour, totalProblemAmount) {
+          var restOfProblems = totalProblemAmount - problemsDuringFirstHour;
+          if(restOfProblems*minutesPerRestProblems > totalminutes) {
+            alert("NO");
+          }
+          else alert("YES");
+      }
+
+      Checker(problemsDuringFirstHour, totalProblemAmount);
+
+      
+
+      //faqtoriali
+      var n = prompt("shemoiyvanet richvi");
+      n = n*1;
+      var f = 1;
+
+      while(n>0) {
+        f*=n;
+        n--;
+      }
+
+      alert(f);
+
+      
+      ///list itemebis dabewdva
+      document.write("<ul>");
+        for(var i = 1; i<=10; i++) {
+          document.write("<li>" + i);
+          if(i%2==0) {
+            
+              document.write("<ul>");
+                  for(var j=1; j<=3; j++){
+                    document.write("<li>" + j + "</li>");
+                  }
+              document.write("</ul>");
+
+           
+          }
+          document.write("</li>");
+        }
+
+
+      document.write("</ul>");
+
+      *
+
+      //sortreba
+
+      var a = [12,34,-5,45,1];
+
+      for(var i=0; i<a.length; i++) {
+        for(var j=i+1; j<a.length; j++) {
+          if(a[j]<a[i]) {
+            var min = a[j];
+            a[j] = a[i];
+            a[i] = minn;
+          }
+        }
+      }
+
+      document.write(a);
+
+      
+
+      //arays shevseba radom cifrebit
+      var arr = []
+      while(arr.length < 10){
+        var randomnumber=Math.round(Math.random()*100);
+        var found=false;
+        for(var i=0;i<arr.length;i++){
+        if(arr[i]==randomnumber){
+          found=true;
+          break;
+        }
+        }
+        if(!found)arr[arr.length]=randomnumber;
+      }
+      document.write(arr);
+
+      
+      
+
+      //dabede is elementebis jami romlebic wina elementze metia
+      var a = [12,34,1,22,23,11];
+      var sum =0;
+      for (var i=0; i<a.length; i++){
+        if (a[i]<a[i+1]) {
+          sum += a[i+1];
+        }
+      }
+
+      document.write(sum);
+
+      
+
+      //reverse
+      var a=[12,11,10,9,8,7,6];
+      var length = a.length-1;
+      for (var i=0; i<a.length/2; i++) {
+        for(var j=length; j>length-1; j--) {
+          var temp = a[i];
+          a[i]= a[j];
+          a[j]=temp;
+          
+
+        }
+        length--;
+      }
+
+      document.write(a);
+      
+
+      //ertnairnishnia mezoblebis datvla
+
+      var a=[12,11,-10,9,-8,-7,-2,6];
+      var neighbour =0;
+      for (var i=0; i<a.length; i++) {
+        if ((a[i]>0 && a[i+1]>0) || (a[i]<0 && a[i+1]<0)) {
+          neighbour+=2;
+        }
+      }
+
+      document.write(neighbour);
+      
+
+      //donald duck is amocanis mcdeloba
+      var numberOfLetter = prompt("enter number of letters in the bag");
+      numberOfLetter = numberOfLetter*1;
+      var firstBlockLetters = ['a', 'p', 'o', 'r'];
+      var secondBlockLetters = ['b', 'm', 's'];
+      var thirdBlockLetters = ['d', 'g', 'j', 'k', 't', 'w'];
+      var letterOwners = [];
+      var point = 0;
+      var sum = 0;
+
+      function ifContains(a, b) {
+        for(var i=0; i<a.length; i++) {
+          if(a[i]==b) {
+            return true;
+          }
+          else {
+            return false;
+          }
+        }
+      }
+
+      for (var i=1; i<numberOfLetter+1; i++) {
+        var name = prompt("enter" + " " + i + " " + "st"+ " " + "name of the owner");
+        letterOwners.push(name);
+      }
+
+      for(var i=0; i<letterOwners.length; i++) {
+        var firstLetter = letterOwners[i].substring(0, 1);
+        if(ifContains(firstBlockLetters, firstLetter)) {
+          point = 0;
+
+        }
+          else if(fContains(secondBlockLetters, firstLetter)){
+            point=1;
+          }
+          else if(ifContains(thirdBlockLetters, firstLetter)) {
+            point =2;
+          }
+
+      }
+
+
+
+      
+      //stringshi asos mozebna;
+      var a = "aaawdwedwedewdewdddwfnnklkjlksf";
+      var aso = "f";
+
+      for (var i=0; i<a.length; i++) {
+        if (a[i]==aso) {
+          alert("ff");
+        }
+      }
+
+      */
+
+      var a = "aaawdwedwedewdewdddwfnnklkjlksf";
+      var aso = "f";
+
+      for (var i=0; i<a.length; i++) {
+        console.log(a[i]);
+        a[i] = "yle";
+      console.log(a[i]);
+      }
+      document.write(a);
+
+
+
+
+	</script>
+</body>
+</html>
